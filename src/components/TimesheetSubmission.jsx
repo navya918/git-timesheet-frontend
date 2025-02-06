@@ -16,8 +16,6 @@ const TimesheetSubmission = ({ setSubmissions }) => {
         ...formData,
         SubmissionDate: new Date().toISOString(),
       };
-
-      #const response = await axios.post("http://localhost:8080/api/timesheets", newFormData);
       const response = await axios.post("https://web-app-bc.azurewebsites.net/api/timesheets", newFormData);
       console.log(response.data);
 
