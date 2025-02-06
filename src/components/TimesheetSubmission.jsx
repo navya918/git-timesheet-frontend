@@ -17,7 +17,8 @@ const TimesheetSubmission = ({ setSubmissions }) => {
         SubmissionDate: new Date().toISOString(),
       };
 
-      const response = await axios.post("http://localhost:8080/api/timesheets", newFormData);
+      #const response = await axios.post("http://localhost:8080/api/timesheets", newFormData);
+      const response = await axios.post("https://web-app-bc.azurewebsites.net/api/timesheets/all", newFormData);
       console.log(response.data);
 
       // Add the new submission to the list of submissions
