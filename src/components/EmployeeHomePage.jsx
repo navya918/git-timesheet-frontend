@@ -14,7 +14,7 @@ const EmployeeHomePage = ({ submissions, setSubmissions, employeeId = 'MTL1021' 
   useEffect(() => {
     const fetchSubmissions = async () => {
       try {
-        const response = await axios.get(`https://web-app-bc.azurewebsites.net/api/timesheets/all/list/${employeeId}`);
+        const response = await axios.get(`https://web-app-bc.azurewebsites.net/api/timesheets/list/${employeeId}`);
         #const response = await axios.get(`http://localhost:8080/api/timesheets/list/${employeeId}`);
         const data = response.data.reverse();
         setSubmissions(data);
@@ -38,7 +38,7 @@ const EmployeeHomePage = ({ submissions, setSubmissions, employeeId = 'MTL1021' 
   const handleDeleteTimesheet = async (id) => {
     try {
       #await axios.delete(`http://localhost:8080/api/timesheets/delete/${id}`);
-      await axios.delete(`https://web-app-bc.azurewebsites.net/api/timesheets/all/delete/${id}`);
+      await axios.delete(`https://web-app-bc.azurewebsites.net/api/timesheets/delete/${id}`);
       const updatedSubmissions = filteredSubmissions.filter(sub => sub.id !== id);
       setFilteredSubmissions(updatedSubmissions);
       setSubmissions(updatedSubmissions);
