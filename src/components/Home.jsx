@@ -8,7 +8,6 @@ const Home = () => {
   const handleManagerPage = () => {
     navigate('/manager-home'); // Navigate to the Manager Home Page
   };
-
   const handleEmployeePage = () => {
     navigate('/employee-home'); // Navigate to the Employee Home Page
   };
