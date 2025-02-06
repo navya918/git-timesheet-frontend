@@ -4,7 +4,7 @@ import { Button, Container, Table, Nav } from 'react-bootstrap';
 import axios from 'axios';
 import Pagination from './Pagination';
 
-const EmployeeHomePage = ({ submissions, setSubmissions, employeeId = 'MTL1021' }) => {
+const EmployeeHomePage = ({ submissions, setSubmissions, employeeId = 'MTL1020' }) => {
   const navigate = useNavigate();
   const [filteredSubmissions, setFilteredSubmissions] = useState(submissions);
   const [counts, setCounts] = useState({ total: 0, pending: 0, approved: 0, rejected: 0 });
